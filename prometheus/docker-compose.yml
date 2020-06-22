@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   prometheus:
-    image: prom/prometheus:v2.6.0
+    image: prom/prometheus:v2.19.1
     hostname: prometheus
     volumes:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
@@ -23,7 +23,7 @@ services:
         max-size: 100m
 
   node-exporter:
-    image: prom/node-exporter:v0.17.0
+    image: prom/node-exporter:v1.0.1
     hostname: exporter
     volumes:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
@@ -46,7 +46,7 @@ services:
         max-size: 100m
 
   grafana:
-    image: grafana/grafana:5.4.0
+    image: grafana/grafana:7.0.3
     hostname: grafana
     volumes:
       - /usr/share/zoneinfo/Asia/Shanghai:/etc/localtime:ro
